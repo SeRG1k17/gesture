@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Gesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dVd-qw-TQo">
+                                <rect key="frame" x="27" y="222" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.66666666669999997" green="0.22074032739999999" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26x-nc-uPP">
+                                <rect key="frame" x="52" y="373" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="showAlerButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g1U-vf-bRc"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Some text here" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jg1-wl-BlG" customClass="ErrorTextField" customModule="Gesture" customModuleProvider="target">
+                                <rect key="frame" x="128" y="437" width="119" height="30"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="119" id="Bks-JJ-xb4"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdD-Ex-MrT">
+                                <rect key="frame" x="282" y="537" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="showError:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3qp-4F-kVA"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Some text here" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TL3-VT-v3u" customClass="ErrorImageTextField" customModule="Gesture" customModuleProvider="target">
+                                <rect key="frame" x="128" y="486" width="119" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.27450980390000002" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kec-HV-IcQ">
+                                <rect key="frame" x="128" y="392" width="119" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Some text here" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CKV-TP-4SD" customClass="PaddingErrorImageTextField" customModule="Gesture" customModuleProvider="target">
+                                <rect key="frame" x="128" y="537" width="119" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TL3-VT-v3u" firstAttribute="top" secondItem="Jg1-wl-BlG" secondAttribute="bottom" constant="19" id="9Sm-AP-PSn"/>
+                            <constraint firstItem="Kec-HV-IcQ" firstAttribute="height" secondItem="Jg1-wl-BlG" secondAttribute="height" id="Evc-u2-Td3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CKV-TP-4SD" secondAttribute="bottom" constant="100" id="HeK-V0-qUM"/>
+                            <constraint firstItem="CKV-TP-4SD" firstAttribute="leading" secondItem="TL3-VT-v3u" secondAttribute="leading" id="Hid-oQ-7g4"/>
+                            <constraint firstItem="TL3-VT-v3u" firstAttribute="leading" secondItem="Jg1-wl-BlG" secondAttribute="leading" id="MCf-hK-SzF"/>
+                            <constraint firstItem="TL3-VT-v3u" firstAttribute="width" secondItem="CKV-TP-4SD" secondAttribute="width" id="Nqa-fc-J73"/>
+                            <constraint firstItem="CKV-TP-4SD" firstAttribute="top" secondItem="TL3-VT-v3u" secondAttribute="bottom" constant="21" id="P5b-9l-cQb"/>
+                            <constraint firstItem="Jg1-wl-BlG" firstAttribute="top" secondItem="Kec-HV-IcQ" secondAttribute="bottom" constant="15" id="UOH-yg-Ueh"/>
+                            <constraint firstItem="Kec-HV-IcQ" firstAttribute="leading" secondItem="Jg1-wl-BlG" secondAttribute="leading" id="Xml-0r-Qsj"/>
+                            <constraint firstItem="TL3-VT-v3u" firstAttribute="trailing" secondItem="Jg1-wl-BlG" secondAttribute="trailing" id="cvf-mJ-23O"/>
+                            <constraint firstAttribute="trailing" secondItem="Jg1-wl-BlG" secondAttribute="trailing" constant="128" id="e7o-sh-mgo"/>
+                            <constraint firstItem="Jg1-wl-BlG" firstAttribute="width" secondItem="TL3-VT-v3u" secondAttribute="width" id="qfA-Eg-YEH"/>
+                            <constraint firstItem="CKV-TP-4SD" firstAttribute="trailing" secondItem="TL3-VT-v3u" secondAttribute="trailing" id="s1O-FU-jfm"/>
+                            <constraint firstItem="Kec-HV-IcQ" firstAttribute="trailing" secondItem="Jg1-wl-BlG" secondAttribute="trailing" id="tbB-Hh-pR9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="customView" destination="dVd-qw-TQo" id="JMP-hR-vL6"/>
+                        <outlet property="errorImageTextField" destination="TL3-VT-v3u" id="CXe-OU-2qj"/>
+                        <outlet property="errorTextField" destination="Jg1-wl-BlG" id="4tm-OJ-LbA"/>
+                        <outlet property="paddingErrorImageTextField" destination="CKV-TP-4SD" id="ra8-QE-ydk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
