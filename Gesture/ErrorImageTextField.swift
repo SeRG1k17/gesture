@@ -31,13 +31,6 @@ class ErrorImageTextField: ErrorTextField {
         return view
     }()
     
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     
     override func commonInit() {
         super.commonInit()
@@ -45,19 +38,21 @@ class ErrorImageTextField: ErrorTextField {
         addSubview(errorImageView)
     }
 
-    override func setup(with fieldStyle: ErrorTextField.FieldStyle) {
-        super.setup(with: fieldStyle)
+    override func setup(with fieldStyle: ErrorTextField.FieldStyle, animated: Bool) {
+        super.setup(with: fieldStyle, animated: animated)
         
-        errorImageView.isHidden = fieldStyle.errorIsHidden
+        UIView.animate(withDuration: duration(animated)) { [weak self] in
+            self?.errorImageView.alpha = fieldStyle.errorAlpha
+        }
     }
 }
 
 extension ErrorTextField.FieldStyle {
     
-    var errorIsHidden: Bool {
+    var errorAlpha: CGFloat {
         switch self {
-        case .normal: return true
-        case .error: return false
+        case .normal: return 0.0
+        case .error: return 1.0
         }
     }
 }

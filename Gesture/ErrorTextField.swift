@@ -1,5 +1,5 @@
 //
-//  ErrorTextField.swift
+//  ErrorTextFieldView.swift
 //  Gesture
 //
 //  Created by Sergey Pugach on 11/2/17.
@@ -36,9 +36,17 @@ extension UITextField {
         }
     }
     
+    
+    @IBInspectable var animated: Bool = true
+    @IBInspectable var animateDuration: TimeInterval = 1
+    
+//    @IBInspectable var duration: TimeInterval {
+//        return animated == true ? animateDuration : 0.0
+//    }
+    
     @IBInspectable var style: Int = 0 {
         didSet {
-            setup(with: fieldStyle)
+            setup(with: fieldStyle, animated: animated)
         }
         //set { setup(with: newValue) }
         //get { return nil }
@@ -57,17 +65,10 @@ extension UITextField {
 //                                              width: self.frame.size.width - 2 * offSet.x,
 //                                              height: self.frame.size.height - 2 * offSet.y))
 //
+//        field.backgroundColor = .white
 //        self.addSubview(field)
 //        return field
 //    }()
-    
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-        super.draw(rect)
-    }
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -82,16 +83,24 @@ extension UITextField {
     }
     
     func commonInit() {
-        setup(with: fieldStyle)
+        setup(with: fieldStyle, animated: false)
     }
     
-    func setup(with fieldStyle: FieldStyle) {
+    func setup(with fieldStyle: FieldStyle, animated: Bool) {
         
         //guard let fieldStyle = fieldStyle else { return }
-        cornerRadius = fieldStyle.cornerRadius
-        borderColor = fieldStyle.borderColor
-        borderWidth = fieldStyle.borderWidth
-        _textColor = fieldStyle.textColor
+        
+        UIView.animate(withDuration: duration(animated)) { [weak self] in
+            
+            self?.cornerRadius = fieldStyle.cornerRadius
+            self?.borderColor = fieldStyle.borderColor
+            self?.borderWidth = fieldStyle.borderWidth
+            self?._textColor = fieldStyle.textColor
+        }
+    }
+    
+    func duration(_ animated: Bool) -> TimeInterval {
+        return animated == true ? animateDuration : 0.0
     }
     
     

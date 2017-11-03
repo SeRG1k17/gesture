@@ -11,9 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var customView: UIView!
-    @IBOutlet weak var errorTextField: ErrorTextField!
-    @IBOutlet weak var errorImageTextField: ErrorImageTextField!
-    @IBOutlet weak var paddingErrorImageTextField: PaddingErrorImageTextField!
+    @IBOutlet weak var expandErrorImageTextFieldView: ErrorTextField!
     
     
     override func viewDidLoad() {
@@ -21,7 +19,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        view.addSubview(CustomView.shared)
+        //view.addSubview(CustomView.shared)
     }
     
 
@@ -35,15 +33,11 @@ class ViewController: UIViewController {
     
     @IBAction func showError(_ sender: UIButton) {
         
-        if errorTextField.fieldStyle == .normal {
-            errorTextField.fieldStyle = .error
-            errorImageTextField.fieldStyle = .error
-            paddingErrorImageTextField.fieldStyle = .error
+        if expandErrorImageTextFieldView.fieldStyle == .normal {
+            expandErrorImageTextFieldView.fieldStyle = .error
             
         } else {
-            errorTextField.fieldStyle = .normal
-            errorImageTextField.fieldStyle = .normal
-            paddingErrorImageTextField.fieldStyle = .normal
+            expandErrorImageTextFieldView.fieldStyle = .normal
         }
     }
 
