@@ -28,7 +28,7 @@
                                     <action selector="showAlerButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g1U-vf-bRc"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Some text here" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jg1-wl-BlG" customClass="ExpandErrorImageTextField" customModule="Gesture" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Some text here" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jg1-wl-BlG">
                                 <rect key="frame" x="128" y="209.5" width="119" height="30"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -46,14 +46,14 @@
                                     <action selector="showError:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3qp-4F-kVA"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kec-HV-IcQ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kec-HV-IcQ" customClass="ExpandErrorImageTextFieldView" customModule="Gesture" customModuleProvider="target">
                                 <rect key="frame" x="128" y="164" width="119" height="30.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30.5" id="zEA-kY-FXY"/>
+                                    <constraint firstAttribute="height" priority="250" constant="30.5" id="zEA-kY-FXY"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36Q-Tj-Zur">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36Q-Tj-Zur">
                                 <rect key="frame" x="166" y="255.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -82,7 +82,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="expandErrorImageTextFieldView" destination="Jg1-wl-BlG" id="gJI-Ym-vA7"/>
+                        <outlet property="expandErrorImageTextFieldView" destination="Kec-HV-IcQ" id="YKp-iO-b41"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

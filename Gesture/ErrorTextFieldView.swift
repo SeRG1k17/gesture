@@ -26,7 +26,7 @@ extension UITextField {
 }
 
 
-@IBDesignable class ErrorTextField: UITextField {
+@IBDesignable class ErrorTextFieldView: UIView {
     
     var fieldStyle: FieldStyle {
         get { return FieldStyle(rawValue: style)! }
@@ -52,23 +52,23 @@ extension UITextField {
         //get { return nil }
     }
     
-//    @IBInspectable var textFieldOffSet: CGPoint = CGPoint(x: 0, y: 0) {
-//        didSet {
-//            self.textField.frame.origin = CGPoint(x: frame.origin.x + textFieldOffSet.x, y: frame.origin.y + textFieldOffSet.y)
-//        }
-//    }
-//
-//    lazy var textField: UITextField = {
-//
-//        let offSet = self.textFieldOffSet
-//        let field = UITextField(frame: CGRect(x: offSet.x, y: offSet.y,
-//                                              width: self.frame.size.width - 2 * offSet.x,
-//                                              height: self.frame.size.height - 2 * offSet.y))
-//
-//        field.backgroundColor = .white
-//        self.addSubview(field)
-//        return field
-//    }()
+    @IBInspectable var textFieldOffSet: CGPoint = CGPoint(x: 0, y: 0) {
+        didSet {
+            self.textField.frame.origin = CGPoint(x: frame.origin.x + textFieldOffSet.x, y: frame.origin.y + textFieldOffSet.y)
+        }
+    }
+
+    lazy var textField: UITextField = {
+
+        let offSet = self.textFieldOffSet
+        let field = UITextField(frame: CGRect(x: offSet.x, y: offSet.y,
+                                              width: self.frame.size.width - 2 * offSet.x,
+                                              height: self.frame.size.height - 2 * offSet.y))
+
+        field.backgroundColor = .white
+        self.addSubview(field)
+        return field
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -93,9 +93,11 @@ extension UITextField {
         UIView.animate(withDuration: duration(animated)) { [weak self] in
             
             self?.cornerRadius = fieldStyle.cornerRadius
-            self?.borderColor = fieldStyle.borderColor
-            self?.borderWidth = fieldStyle.borderWidth
-            self?._textColor = fieldStyle.textColor
+            
+            self?.textField.cornerRadius = fieldStyle.cornerRadius
+            self?.textField.borderColor = fieldStyle.borderColor
+            self?.textField.borderWidth = fieldStyle.borderWidth
+            self?.textField._textColor = fieldStyle.textColor
         }
     }
     

@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var customView: UIView!
-    @IBOutlet weak var expandErrorImageTextFieldView: ErrorTextField!
+    @IBOutlet weak var expandErrorImageTextFieldView: ErrorTextFieldView!
     
     
     override func viewDidLoad() {

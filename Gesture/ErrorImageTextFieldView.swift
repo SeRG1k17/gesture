@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ErrorImageTextField: ErrorTextField {
+class ErrorImageTextFieldView: ErrorTextFieldView {
     
     @IBInspectable var errorImage: UIImage? = #imageLiteral(resourceName: "error") {
         didSet {
@@ -38,7 +38,7 @@ class ErrorImageTextField: ErrorTextField {
         addSubview(errorImageView)
     }
 
-    override func setup(with fieldStyle: ErrorTextField.FieldStyle, animated: Bool) {
+    override func setup(with fieldStyle: ErrorTextFieldView.FieldStyle, animated: Bool) {
         super.setup(with: fieldStyle, animated: animated)
         
         UIView.animate(withDuration: duration(animated)) { [weak self] in
@@ -47,7 +47,7 @@ class ErrorImageTextField: ErrorTextField {
     }
 }
 
-extension ErrorTextField.FieldStyle {
+extension ErrorTextFieldView.FieldStyle {
     
     var errorAlpha: CGFloat {
         switch self {

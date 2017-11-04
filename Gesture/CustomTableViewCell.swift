@@ -11,7 +11,7 @@ import UIKit
 class CustomTableViewCell: UITableViewCell {
 
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var errorTextFieldView: ExpandErrorImageTextField!
+    @IBOutlet weak var errorTextFieldView: ExpandErrorImageTextFieldView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
