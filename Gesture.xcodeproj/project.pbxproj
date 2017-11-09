@@ -22,6 +22,7 @@
 		65E918251FAB23610069DB24 /* ErrorTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E918241FAB23610069DB24 /* ErrorTextFieldView.swift */; };
 		65E98AEB1FAB4329008429C6 /* ErrorImageTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E98AEA1FAB4329008429C6 /* ErrorImageTextFieldView.swift */; };
 		65E98AED1FAB4B70008429C6 /* ExpandErrorImageTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E98AEC1FAB4B70008429C6 /* ExpandErrorImageTextFieldView.swift */; };
+		7042373C1FAE74FC005C2A7A /* InsetsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042373B1FAE74FC005C2A7A /* InsetsTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		65E918241FAB23610069DB24 /* ErrorTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTextFieldView.swift; sourceTree = "<group>"; };
 		65E98AEA1FAB4329008429C6 /* ErrorImageTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorImageTextFieldView.swift; sourceTree = "<group>"; };
 		65E98AEC1FAB4B70008429C6 /* ExpandErrorImageTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandErrorImageTextFieldView.swift; sourceTree = "<group>"; };
+		7042373B1FAE74FC005C2A7A /* InsetsTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetsTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				65E918241FAB23610069DB24 /* ErrorTextFieldView.swift */,
 				65E98AEA1FAB4329008429C6 /* ErrorImageTextFieldView.swift */,
 				65E98AEC1FAB4B70008429C6 /* ExpandErrorImageTextFieldView.swift */,
+				7042373B1FAE74FC005C2A7A /* InsetsTextField.swift */,
 				6523EBBD1FAB2A620097D1EA /* Ext */,
 				652E21D81F6FC8BA00A10544 /* Main.storyboard */,
 				652E21DB1F6FC8BA00A10544 /* Assets.xcassets */,
@@ -179,6 +182,7 @@
 				65E918251FAB23610069DB24 /* ErrorTextFieldView.swift in Sources */,
 				6523EBBC1FAB2A270097D1EA /* CGColor.swift in Sources */,
 				65365ABF1FAC8E2E0061619E /* CustomTableViewCell.swift in Sources */,
+				7042373C1FAE74FC005C2A7A /* InsetsTextField.swift in Sources */,
 				65E98AEB1FAB4329008429C6 /* ErrorImageTextFieldView.swift in Sources */,
 				65365ABD1FAC8E0C0061619E /* TableViewController.swift in Sources */,
 				652E21E91F6FD2ED00A10544 /* NotificationBanner.swift in Sources */,
