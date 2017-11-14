@@ -10,24 +10,28 @@ import UIKit
 
 class ErrorImageTextFieldView: ErrorTextFieldView {
     
-    @IBInspectable var errorImage: UIImage? = #imageLiteral(resourceName: "error") {
+    @IBInspectable var errorImage: UIImage? {
+//        get { return errorImageView.image }
+//        set { errorImageView.image = newValue }
         didSet {
             errorImageView.image = errorImage
         }
     }
     
-    @IBInspectable var imageOffSet: CGPoint = CGPoint(x: 0, y: 0) {
+    @IBInspectable var imageSidePadding: CGFloat = 0 {
         didSet {
-            let center = errorImageView.center
-            errorImageView.center = CGPoint(x: center.x + imageOffSet.x, y: center.y + imageOffSet.y)
+            var center = errorImageView.center
+            center.x += imageSidePadding
+            errorImageView.center.x += imageSidePadding//center
         }
     }
     
     lazy var errorImageView: UIImageView = {
        
         let view = UIImageView(image: self.errorImage)
-        view.center = CGPoint(x: -view.bounds.width, y: self.bounds.height / 2)
-
+        view.center = CGPoint(x: view.bounds.size.width / 2, y: self.textField.center.y)
+        self.addSubview(view)
+        
         return view
     }()
     
@@ -35,11 +39,23 @@ class ErrorImageTextFieldView: ErrorTextFieldView {
     override func commonInit() {
         super.commonInit()
         
-        addSubview(errorImageView)
+        setupViews()
+    }
+    
+    func setupViews() {
+        
+        var fieldFrame = textField.frame
+        let translation = errorImageView.frame.maxX + imageSidePadding
+        fieldFrame.origin.x += errorImageView.frame.maxX + imageSidePadding
+        fieldFrame.size.width -= 2 * translation
+        
+        textField.frame = fieldFrame
     }
 
     override func setup(with fieldStyle: ErrorTextFieldView.FieldStyle, animated: Bool) {
         super.setup(with: fieldStyle, animated: animated)
+        
+        errorImage = fieldStyle.errorImage
         
         UIView.animate(withDuration: duration(animated)) { [weak self] in
             self?.errorImageView.alpha = fieldStyle.errorAlpha
@@ -48,6 +64,10 @@ class ErrorImageTextFieldView: ErrorTextFieldView {
 }
 
 extension ErrorTextFieldView.FieldStyle {
+    
+    var errorImage: UIImage? {
+        return #imageLiteral(resourceName: "error")
+    }
     
     var errorAlpha: CGFloat {
         switch self {

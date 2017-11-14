@@ -10,8 +10,8 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
-    var extraHeight: CGFloat = 0
-    
+    //var extraHeight: CGFloat = 0
+    var selected: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +27,9 @@ class TableViewController: UITableViewController {
     @IBAction func reloadIt(_ sender: UIBarButtonItem) {
         
         //isHasError = !isHasError
-        extraHeight = extraHeight == 50 ? 0 : 50
-        tableView.reloadData()
+        //extraHeight = extraHeight == 50 ? 0 : 50
+        selected = !(selected ?? false)
+        tableView.reloadRows(at: [IndexPath(row: 4, section: 0)], with: .automatic)
     }
 
     // MARK: - Table view data source
@@ -46,6 +47,19 @@ class TableViewController: UITableViewController {
         cell.label.text = "ROW: \(indexPath.row)"
         // Configure the cell...
 
+        if 4 == indexPath.row && selected == true {
+            
+            cell.errorTextFieldView.fieldStyle = .error
+//            if cell.errorTextFieldView.fieldStyle == .normal {
+//                cell.errorTextFieldView.fieldStyle = .error
+//
+//            } else {
+//                cell.errorTextFieldView.fieldStyle = .normal
+//            }
+        } else {
+           cell.errorTextFieldView.fieldStyle = .normal
+        }
+        
         return cell
     }
     

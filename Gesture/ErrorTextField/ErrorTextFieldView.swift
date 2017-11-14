@@ -28,47 +28,42 @@ extension UITextField {
 
 @IBDesignable class ErrorTextFieldView: UIView {
     
-    var fieldStyle: FieldStyle {
-        get { return FieldStyle(rawValue: style)! }
-        set {
-            //guard let value = newValue?.rawValue else { return }
-            style = newValue.rawValue
-        }
-    }
-    
     
     @IBInspectable var animated: Bool = true
     @IBInspectable var animateDuration: TimeInterval = 1
     
-//    @IBInspectable var duration: TimeInterval {
-//        return animated == true ? animateDuration : 0.0
-//    }
-    
+    @IBInspectable var textFieldSideInset: CGFloat = 16 {
+        didSet {
+            setSideInset(textFieldSideInset, for: textField)
+        }
+    }
+
     @IBInspectable var style: Int = 0 {
         didSet {
             setup(with: fieldStyle, animated: animated)
         }
-        //set { setup(with: newValue) }
-        //get { return nil }
     }
     
-    @IBInspectable var textFieldOffSet: CGPoint = CGPoint(x: 0, y: 0) {
-        didSet {
-            self.textField.frame.origin = CGPoint(x: frame.origin.x + textFieldOffSet.x, y: frame.origin.y + textFieldOffSet.y)
-        }
+    var fieldStyle: FieldStyle {
+        get { return FieldStyle(rawValue: style)! }
+        set { style = newValue.rawValue }
     }
 
-    lazy var textField: UITextField = {
+    lazy var textField: InsetsTextField = {
 
-        let offSet = self.textFieldOffSet
-        let field = UITextField(frame: CGRect(x: offSet.x, y: offSet.y,
-                                              width: self.frame.size.width - 2 * offSet.x,
-                                              height: self.frame.size.height - 2 * offSet.y))
-
-        field.backgroundColor = .white
+        let size = self.frame.size
+        let field = InsetsTextField(frame: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+        
+        field.autoresizingMask = [.flexibleWidth]
+        field.backgroundColor = .green
+        self.setSideInset(self.textFieldSideInset, for: field)
         self.addSubview(field)
+        
         return field
     }()
+    
+    
+    //MARK: - Initialization
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -84,11 +79,11 @@ extension UITextField {
     
     func commonInit() {
         setup(with: fieldStyle, animated: false)
+        
+        backgroundColor = .blue
     }
     
     func setup(with fieldStyle: FieldStyle, animated: Bool) {
-        
-        //guard let fieldStyle = fieldStyle else { return }
         
         UIView.animate(withDuration: duration(animated)) { [weak self] in
             
@@ -105,6 +100,11 @@ extension UITextField {
         return animated == true ? animateDuration : 0.0
     }
     
+    
+    func setSideInset(_ inset: CGFloat, for textField: InsetsTextField) {
+        textField.insets.left = inset
+        textField.insets.right = inset
+    }
     
     enum FieldStyle: Int {
         case normal, error
