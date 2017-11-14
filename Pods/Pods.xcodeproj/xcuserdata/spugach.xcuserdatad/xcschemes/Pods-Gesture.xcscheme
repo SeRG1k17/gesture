@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "652E21D01F6FC8BA00A10544"
-               BuildableName = "Gesture.app"
-               BlueprintName = "Gesture"
-               ReferencedContainer = "container:Gesture.xcodeproj">
+               BlueprintIdentifier = "F1C67A4F2DAD969C584F93980F49E055"
+               BuildableName = "Pods_Gesture.framework"
+               BlueprintName = "Pods-Gesture"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -30,15 +30,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "652E21D01F6FC8BA00A10544"
-            BuildableName = "Gesture.app"
-            BlueprintName = "Gesture"
-            ReferencedContainer = "container:Gesture.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -53,16 +44,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "652E21D01F6FC8BA00A10544"
-            BuildableName = "Gesture.app"
-            BlueprintName = "Gesture"
-            ReferencedContainer = "container:Gesture.xcodeproj">
+            BlueprintIdentifier = "F1C67A4F2DAD969C584F93980F49E055"
+            BuildableName = "Pods_Gesture.framework"
+            BlueprintName = "Pods-Gesture"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -72,16 +62,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "652E21D01F6FC8BA00A10544"
-            BuildableName = "Gesture.app"
-            BlueprintName = "Gesture"
-            ReferencedContainer = "container:Gesture.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

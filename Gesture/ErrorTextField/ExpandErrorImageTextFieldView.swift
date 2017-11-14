@@ -40,8 +40,8 @@ class ExpandErrorImageTextFieldView: ErrorImageTextFieldView {
         
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.setContentCompressionResistancePriority(UILayoutPriorityRequired, for: .vertical)
-        label.setContentHuggingPriority(UILayoutPriorityRequired, for: .vertical)
+        label.setContentCompressionResistancePriority(.required, for: .vertical)
+        label.setContentHuggingPriority(.required, for: .vertical)
             
             
         

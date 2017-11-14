@@ -25,7 +25,7 @@ class CustomView: UIView {
     
     
     
-    func gesture(_ sender: UITapGestureRecognizer) {
+    @objc func gesture(_ sender: UITapGestureRecognizer) {
         print("called")
     }
     

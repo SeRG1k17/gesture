@@ -18,7 +18,7 @@ extension UITextField {
 
             guard let attr = attributedText else { return }
             let mutableAttr = NSMutableAttributedString(attributedString: attr)
-            mutableAttr.setAttributes([NSForegroundColorAttributeName: newValue as Any], range: NSMakeRange(0, attr.length))
+            mutableAttr.setAttributes([.foregroundColor: newValue as Any], range: NSMakeRange(0, attr.length))
                 
             attributedText = mutableAttr
         }

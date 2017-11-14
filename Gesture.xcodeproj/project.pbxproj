@@ -15,13 +15,23 @@
 		652E21DC1F6FC8BA00A10544 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652E21DB1F6FC8BA00A10544 /* Assets.xcassets */; };
 		652E21DF1F6FC8BA00A10544 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652E21DD1F6FC8BA00A10544 /* LaunchScreen.storyboard */; };
 		652E21E71F6FC92300A10544 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652E21E61F6FC92300A10544 /* CustomView.swift */; };
-		652E21E91F6FD2ED00A10544 /* NotificationBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652E21E81F6FD2ED00A10544 /* NotificationBanner.swift */; };
+		652E21E91F6FD2ED00A10544 /* NotificationBanner1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652E21E81F6FD2ED00A10544 /* NotificationBanner1.swift */; };
 		65365ABD1FAC8E0C0061619E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65365ABC1FAC8E0C0061619E /* TableViewController.swift */; };
 		65365ABF1FAC8E2E0061619E /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65365ABE1FAC8E2E0061619E /* CustomTableViewCell.swift */; };
 		65365AC11FAC923D0061619E /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65365AC01FAC923D0061619E /* CustomTableViewCell.xib */; };
+		654CCA951FBAFE1A006F0B30 /* NotificationBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654CCA8C1FBAFE19006F0B30 /* NotificationBanner.swift */; };
+		654CCA961FBAFE1A006F0B30 /* NotificationBannerUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654CCA8D1FBAFE19006F0B30 /* NotificationBannerUtilities.swift */; };
+		654CCA971FBAFE1A006F0B30 /* BannerColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654CCA8E1FBAFE19006F0B30 /* BannerColors.swift */; };
+		654CCA981FBAFE1A006F0B30 /* BannerPositionFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654CCA8F1FBAFE19006F0B30 /* BannerPositionFrame.swift */; };
+		654CCA991FBAFE1A006F0B30 /* BannerStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654CCA901FBAFE19006F0B30 /* BannerStyle.swift */; };
+		654CCA9A1FBAFE1A006F0B30 /* BaseNotificationBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654CCA911FBAFE1A006F0B30 /* BaseNotificationBanner.swift */; };
+		654CCA9B1FBAFE1A006F0B30 /* BannerHapticGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654CCA921FBAFE1A006F0B30 /* BannerHapticGenerator.swift */; };
+		654CCA9C1FBAFE1A006F0B30 /* NotificationBannerQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654CCA931FBAFE1A006F0B30 /* NotificationBannerQueue.swift */; };
+		654CCA9D1FBAFE1A006F0B30 /* StatusBarNotificationBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654CCA941FBAFE1A006F0B30 /* StatusBarNotificationBanner.swift */; };
 		65E918251FAB23610069DB24 /* ErrorTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E918241FAB23610069DB24 /* ErrorTextFieldView.swift */; };
 		65E98AEB1FAB4329008429C6 /* ErrorImageTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E98AEA1FAB4329008429C6 /* ErrorImageTextFieldView.swift */; };
 		65E98AED1FAB4B70008429C6 /* ExpandErrorImageTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E98AEC1FAB4B70008429C6 /* ExpandErrorImageTextFieldView.swift */; };
+		BA5608CC7713983825997D83 /* Pods_Gesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A7632957DBAE9456CADFA2 /* Pods_Gesture.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,13 +45,25 @@
 		652E21DE1F6FC8BA00A10544 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		652E21E01F6FC8BA00A10544 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		652E21E61F6FC92300A10544 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
-		652E21E81F6FD2ED00A10544 /* NotificationBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationBanner.swift; sourceTree = "<group>"; };
+		652E21E81F6FD2ED00A10544 /* NotificationBanner1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationBanner1.swift; sourceTree = "<group>"; };
 		65365ABC1FAC8E0C0061619E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		65365ABE1FAC8E2E0061619E /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		65365AC01FAC923D0061619E /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		654CCA8C1FBAFE19006F0B30 /* NotificationBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationBanner.swift; sourceTree = "<group>"; };
+		654CCA8D1FBAFE19006F0B30 /* NotificationBannerUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationBannerUtilities.swift; sourceTree = "<group>"; };
+		654CCA8E1FBAFE19006F0B30 /* BannerColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerColors.swift; sourceTree = "<group>"; };
+		654CCA8F1FBAFE19006F0B30 /* BannerPositionFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerPositionFrame.swift; sourceTree = "<group>"; };
+		654CCA901FBAFE19006F0B30 /* BannerStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerStyle.swift; sourceTree = "<group>"; };
+		654CCA911FBAFE1A006F0B30 /* BaseNotificationBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNotificationBanner.swift; sourceTree = "<group>"; };
+		654CCA921FBAFE1A006F0B30 /* BannerHapticGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerHapticGenerator.swift; sourceTree = "<group>"; };
+		654CCA931FBAFE1A006F0B30 /* NotificationBannerQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationBannerQueue.swift; sourceTree = "<group>"; };
+		654CCA941FBAFE1A006F0B30 /* StatusBarNotificationBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarNotificationBanner.swift; sourceTree = "<group>"; };
 		65E918241FAB23610069DB24 /* ErrorTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTextFieldView.swift; sourceTree = "<group>"; };
 		65E98AEA1FAB4329008429C6 /* ErrorImageTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorImageTextFieldView.swift; sourceTree = "<group>"; };
 		65E98AEC1FAB4B70008429C6 /* ExpandErrorImageTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandErrorImageTextFieldView.swift; sourceTree = "<group>"; };
+		8E57B41DF4FF62530E2B734A /* Pods-Gesture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gesture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gesture/Pods-Gesture.debug.xcconfig"; sourceTree = "<group>"; };
+		D3279D6483BF376032F03D18 /* Pods-Gesture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gesture.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gesture/Pods-Gesture.release.xcconfig"; sourceTree = "<group>"; };
+		E1A7632957DBAE9456CADFA2 /* Pods_Gesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,12 +71,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA5608CC7713983825997D83 /* Pods_Gesture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		087ACEDAA6556A2680F37F49 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E57B41DF4FF62530E2B734A /* Pods-Gesture.debug.xcconfig */,
+				D3279D6483BF376032F03D18 /* Pods-Gesture.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6523EBBD1FAB2A620097D1EA /* Ext */ = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +101,8 @@
 			children = (
 				652E21D31F6FC8BA00A10544 /* Gesture */,
 				652E21D21F6FC8BA00A10544 /* Products */,
+				087ACEDAA6556A2680F37F49 /* Pods */,
+				97F3DFA34877EB088EDEF712 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,10 +123,8 @@
 				65365AC01FAC923D0061619E /* CustomTableViewCell.xib */,
 				65365ABE1FAC8E2E0061619E /* CustomTableViewCell.swift */,
 				652E21E61F6FC92300A10544 /* CustomView.swift */,
-				652E21E81F6FD2ED00A10544 /* NotificationBanner.swift */,
-				65E918241FAB23610069DB24 /* ErrorTextFieldView.swift */,
-				65E98AEA1FAB4329008429C6 /* ErrorImageTextFieldView.swift */,
-				65E98AEC1FAB4B70008429C6 /* ExpandErrorImageTextFieldView.swift */,
+				654CCA761FBAF17C006F0B30 /* NotificationBanner */,
+				654CCA771FBAF186006F0B30 /* ErrorTextField */,
 				6523EBBD1FAB2A620097D1EA /* Ext */,
 				652E21D81F6FC8BA00A10544 /* Main.storyboard */,
 				652E21DB1F6FC8BA00A10544 /* Assets.xcassets */,
@@ -102,6 +134,41 @@
 			path = Gesture;
 			sourceTree = "<group>";
 		};
+		654CCA761FBAF17C006F0B30 /* NotificationBanner */ = {
+			isa = PBXGroup;
+			children = (
+				654CCA8E1FBAFE19006F0B30 /* BannerColors.swift */,
+				654CCA921FBAFE1A006F0B30 /* BannerHapticGenerator.swift */,
+				654CCA8F1FBAFE19006F0B30 /* BannerPositionFrame.swift */,
+				654CCA901FBAFE19006F0B30 /* BannerStyle.swift */,
+				654CCA911FBAFE1A006F0B30 /* BaseNotificationBanner.swift */,
+				654CCA8C1FBAFE19006F0B30 /* NotificationBanner.swift */,
+				654CCA931FBAFE1A006F0B30 /* NotificationBannerQueue.swift */,
+				654CCA8D1FBAFE19006F0B30 /* NotificationBannerUtilities.swift */,
+				654CCA941FBAFE1A006F0B30 /* StatusBarNotificationBanner.swift */,
+				652E21E81F6FD2ED00A10544 /* NotificationBanner1.swift */,
+			);
+			path = NotificationBanner;
+			sourceTree = "<group>";
+		};
+		654CCA771FBAF186006F0B30 /* ErrorTextField */ = {
+			isa = PBXGroup;
+			children = (
+				65E918241FAB23610069DB24 /* ErrorTextFieldView.swift */,
+				65E98AEA1FAB4329008429C6 /* ErrorImageTextFieldView.swift */,
+				65E98AEC1FAB4B70008429C6 /* ExpandErrorImageTextFieldView.swift */,
+			);
+			path = ErrorTextField;
+			sourceTree = "<group>";
+		};
+		97F3DFA34877EB088EDEF712 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1A7632957DBAE9456CADFA2 /* Pods_Gesture.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 652E21E31F6FC8BA00A10544 /* Build configuration list for PBXNativeTarget "Gesture" */;
 			buildPhases = (
+				1AE1F31CF5B35003BF6074DD /* [CP] Check Pods Manifest.lock */,
 				652E21CD1F6FC8BA00A10544 /* Sources */,
 				652E21CE1F6FC8BA00A10544 /* Frameworks */,
 				652E21CF1F6FC8BA00A10544 /* Resources */,
+				A92E5014C72EDB28FEE2CFE9 /* [CP] Embed Pods Frameworks */,
+				62F48EFF399DF5885FB795D9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,7 +199,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Sergey Pugach";
 				TargetAttributes = {
 					652E21D01F6FC8BA00A10544 = {
@@ -171,17 +241,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1AE1F31CF5B35003BF6074DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gesture-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62F48EFF399DF5885FB795D9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gesture/Pods-Gesture-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A92E5014C72EDB28FEE2CFE9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Gesture/Pods-Gesture-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gesture/Pods-Gesture-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		652E21CD1F6FC8BA00A10544 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				654CCA951FBAFE1A006F0B30 /* NotificationBanner.swift in Sources */,
+				654CCA971FBAFE1A006F0B30 /* BannerColors.swift in Sources */,
 				65E918251FAB23610069DB24 /* ErrorTextFieldView.swift in Sources */,
+				654CCA991FBAFE1A006F0B30 /* BannerStyle.swift in Sources */,
 				6523EBBC1FAB2A270097D1EA /* CGColor.swift in Sources */,
+				654CCA9C1FBAFE1A006F0B30 /* NotificationBannerQueue.swift in Sources */,
+				654CCA9D1FBAFE1A006F0B30 /* StatusBarNotificationBanner.swift in Sources */,
 				65365ABF1FAC8E2E0061619E /* CustomTableViewCell.swift in Sources */,
 				65E98AEB1FAB4329008429C6 /* ErrorImageTextFieldView.swift in Sources */,
+				654CCA9A1FBAFE1A006F0B30 /* BaseNotificationBanner.swift in Sources */,
+				654CCA961FBAFE1A006F0B30 /* NotificationBannerUtilities.swift in Sources */,
 				65365ABD1FAC8E0C0061619E /* TableViewController.swift in Sources */,
-				652E21E91F6FD2ED00A10544 /* NotificationBanner.swift in Sources */,
+				654CCA981FBAFE1A006F0B30 /* BannerPositionFrame.swift in Sources */,
+				652E21E91F6FD2ED00A10544 /* NotificationBanner1.swift in Sources */,
+				654CCA9B1FBAFE1A006F0B30 /* BannerHapticGenerator.swift in Sources */,
 				652E21E71F6FC92300A10544 /* CustomView.swift in Sources */,
 				652E21D71F6FC8BA00A10544 /* ViewController.swift in Sources */,
 				6523EBBA1FAB2A180097D1EA /* View.swift in Sources */,
@@ -222,7 +355,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -230,7 +365,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -272,7 +411,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -280,7 +421,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -307,6 +452,7 @@
 		};
 		652E21E41F6FC8BA00A10544 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E57B41DF4FF62530E2B734A /* Pods-Gesture.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TSKS8A822C;
@@ -314,12 +460,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Gesture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		652E21E51F6FC8BA00A10544 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3279D6483BF376032F03D18 /* Pods-Gesture.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TSKS8A822C;
@@ -327,7 +474,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Gesture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
