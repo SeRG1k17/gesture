@@ -31,6 +31,7 @@
 		65E918251FAB23610069DB24 /* ErrorTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E918241FAB23610069DB24 /* ErrorTextFieldView.swift */; };
 		65E98AEB1FAB4329008429C6 /* ErrorImageTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E98AEA1FAB4329008429C6 /* ErrorImageTextFieldView.swift */; };
 		65E98AED1FAB4B70008429C6 /* ExpandErrorImageTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E98AEC1FAB4B70008429C6 /* ExpandErrorImageTextFieldView.swift */; };
+		70168B411FBC5D8D00D3D7A3 /* InsetsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70168B401FBC5D8D00D3D7A3 /* InsetsTextField.swift */; };
 		BA5608CC7713983825997D83 /* Pods_Gesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A7632957DBAE9456CADFA2 /* Pods_Gesture.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		65E918241FAB23610069DB24 /* ErrorTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTextFieldView.swift; sourceTree = "<group>"; };
 		65E98AEA1FAB4329008429C6 /* ErrorImageTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorImageTextFieldView.swift; sourceTree = "<group>"; };
 		65E98AEC1FAB4B70008429C6 /* ExpandErrorImageTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandErrorImageTextFieldView.swift; sourceTree = "<group>"; };
+		70168B401FBC5D8D00D3D7A3 /* InsetsTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetsTextField.swift; sourceTree = "<group>"; };
 		8E57B41DF4FF62530E2B734A /* Pods-Gesture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gesture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gesture/Pods-Gesture.debug.xcconfig"; sourceTree = "<group>"; };
 		D3279D6483BF376032F03D18 /* Pods-Gesture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gesture.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gesture/Pods-Gesture.release.xcconfig"; sourceTree = "<group>"; };
 		E1A7632957DBAE9456CADFA2 /* Pods_Gesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +159,7 @@
 				65E918241FAB23610069DB24 /* ErrorTextFieldView.swift */,
 				65E98AEA1FAB4329008429C6 /* ErrorImageTextFieldView.swift */,
 				65E98AEC1FAB4B70008429C6 /* ExpandErrorImageTextFieldView.swift */,
+				70168B401FBC5D8D00D3D7A3 /* InsetsTextField.swift */,
 			);
 			path = ErrorTextField;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				654CCA951FBAFE1A006F0B30 /* NotificationBanner.swift in Sources */,
 				654CCA971FBAFE1A006F0B30 /* BannerColors.swift in Sources */,
 				65E918251FAB23610069DB24 /* ErrorTextFieldView.swift in Sources */,
+				70168B411FBC5D8D00D3D7A3 /* InsetsTextField.swift in Sources */,
 				654CCA991FBAFE1A006F0B30 /* BannerStyle.swift in Sources */,
 				6523EBBC1FAB2A270097D1EA /* CGColor.swift in Sources */,
 				654CCA9C1FBAFE1A006F0B30 /* NotificationBannerQueue.swift in Sources */,

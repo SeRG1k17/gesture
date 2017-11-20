@@ -11,8 +11,8 @@ import UIKit
 class ErrorImageTextFieldView: ErrorTextFieldView {
     
     @IBInspectable var errorImage: UIImage? {
-//        get { return errorImageView.image }
-//        set { errorImageView.image = newValue }
+        //        get { return errorImageView.image }
+        //        set { errorImageView.image = newValue }
         didSet {
             errorImageView.image = errorImage
         }
@@ -27,7 +27,7 @@ class ErrorImageTextFieldView: ErrorTextFieldView {
     }
     
     lazy var errorImageView: UIImageView = {
-       
+        
         let view = UIImageView(image: self.errorImage)
         view.center = CGPoint(x: view.bounds.size.width / 2, y: self.textField.center.y)
         self.addSubview(view)
@@ -51,7 +51,7 @@ class ErrorImageTextFieldView: ErrorTextFieldView {
         
         textField.frame = fieldFrame
     }
-
+    
     override func setup(with fieldStyle: ErrorTextFieldView.FieldStyle, animated: Bool) {
         super.setup(with: fieldStyle, animated: animated)
         
@@ -76,3 +76,4 @@ extension ErrorTextFieldView.FieldStyle {
         }
     }
 }
+

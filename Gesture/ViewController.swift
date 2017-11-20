@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 
     @IBAction func showAlerButtonDidTapped(_ sender: UIButton) {
         
-        let banner = NotificationBanner(title: "Basic Success Notification",
+        let banner = NotificationBanner(title: "Basic Success Notification Basic Success Notification Basic Success Notification Basic Success Notification Notification Basic Success Notification",
                                         style: .danger)
 //        banner.delegate = self
 //

@@ -21,55 +21,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26x-nc-uPP">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26x-nc-uPP">
                                 <rect key="frame" x="52" y="164" width="70" height="30"/>
                                 <state key="normal" title="ShowAlert"/>
                                 <connections>
                                     <action selector="showAlerButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g1U-vf-bRc"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Some text here" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jg1-wl-BlG">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Some text here" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jg1-wl-BlG">
                                 <rect key="frame" x="128" y="209.5" width="119" height="30"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="119" id="Bks-JJ-xb4"/>
-                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdD-Ex-MrT">
-                                <rect key="frame" x="282" y="537" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="showError:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3qp-4F-kVA"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kec-HV-IcQ" customClass="ExpandErrorImageTextFieldView" customModule="Gesture" customModuleProvider="target">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kec-HV-IcQ" customClass="ExpandErrorImageTextFieldView" customModule="Gesture" customModuleProvider="target">
                                 <rect key="frame" x="128" y="164" width="119" height="30.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" priority="250" constant="30.5" id="zEA-kY-FXY"/>
+                                    <constraint firstAttribute="height" constant="30" id="aKd-I1-5DX"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="heightConstraint" destination="aKd-I1-5DX" id="R6R-Yp-A4h"/>
+                                </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36Q-Tj-Zur">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36Q-Tj-Zur">
                                 <rect key="frame" x="166" y="255.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdD-Ex-MrT">
+                                <rect key="frame" x="164" y="120" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="showError:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3qp-4F-kVA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Kec-HV-IcQ" firstAttribute="centerY" secondItem="26x-nc-uPP" secondAttribute="centerY" id="2I7-hd-984"/>
+                            <constraint firstItem="Kec-HV-IcQ" firstAttribute="leading" secondItem="26x-nc-uPP" secondAttribute="trailing" constant="6" id="6f6-F7-0c1"/>
                             <constraint firstItem="36Q-Tj-Zur" firstAttribute="top" secondItem="Jg1-wl-BlG" secondAttribute="bottom" constant="16" id="8Z9-0o-XCs"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="26x-nc-uPP" secondAttribute="trailing" constant="20" symbolic="YES" id="8gs-8v-Clm"/>
+                            <constraint firstItem="Kec-HV-IcQ" firstAttribute="top" secondItem="26x-nc-uPP" secondAttribute="top" id="C0D-ly-lPa"/>
                             <constraint firstItem="26x-nc-uPP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="52" id="Fyw-gt-ouJ"/>
                             <constraint firstItem="36Q-Tj-Zur" firstAttribute="centerX" secondItem="Jg1-wl-BlG" secondAttribute="centerX" id="J01-q6-Ftf"/>
+                            <constraint firstItem="Kec-HV-IcQ" firstAttribute="top" secondItem="LdD-Ex-MrT" secondAttribute="bottom" constant="14" id="J7d-Cn-HRg"/>
+                            <constraint firstItem="LdD-Ex-MrT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="56" id="KS4-ab-t6u"/>
+                            <constraint firstAttribute="trailing" secondItem="Kec-HV-IcQ" secondAttribute="trailing" constant="64" id="L0O-Et-OQI"/>
+                            <constraint firstItem="LdD-Ex-MrT" firstAttribute="centerX" secondItem="Kec-HV-IcQ" secondAttribute="centerX" id="NcO-Wx-ah7"/>
                             <constraint firstItem="Jg1-wl-BlG" firstAttribute="top" secondItem="Kec-HV-IcQ" secondAttribute="bottom" constant="15" id="UOH-yg-Ueh"/>
                             <constraint firstItem="Kec-HV-IcQ" firstAttribute="leading" secondItem="Jg1-wl-BlG" secondAttribute="leading" id="Xml-0r-Qsj"/>
-                            <constraint firstAttribute="trailing" secondItem="Jg1-wl-BlG" secondAttribute="trailing" constant="128" id="e7o-sh-mgo"/>
                             <constraint firstItem="26x-nc-uPP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="q0i-lF-mrP"/>
                             <constraint firstItem="Kec-HV-IcQ" firstAttribute="trailing" secondItem="Jg1-wl-BlG" secondAttribute="trailing" id="tbB-Hh-pR9"/>
                         </constraints>
@@ -93,7 +95,7 @@
         <scene sceneID="gLL-cQ-jIh">
             <objects>
                 <tableViewController id="3kP-PC-2dB" customClass="TableViewController" customModule="Gesture" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sXT-F9-zJc">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="sXT-F9-zJc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

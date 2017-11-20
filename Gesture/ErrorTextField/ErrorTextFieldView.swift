@@ -15,11 +15,11 @@ extension UITextField {
         get { return textColor }
         set {
             textColor = newValue
-
+            
             guard let attr = attributedText else { return }
             let mutableAttr = NSMutableAttributedString(attributedString: attr)
             mutableAttr.setAttributes([.foregroundColor: newValue as Any], range: NSMakeRange(0, attr.length))
-                
+            
             attributedText = mutableAttr
         }
     }
@@ -30,14 +30,14 @@ extension UITextField {
     
     
     @IBInspectable var animated: Bool = true
-    @IBInspectable var animateDuration: TimeInterval = 1
+    @IBInspectable var animateDuration: TimeInterval = 0.5
     
     @IBInspectable var textFieldSideInset: CGFloat = 16 {
         didSet {
             setSideInset(textFieldSideInset, for: textField)
         }
     }
-
+    
     @IBInspectable var style: Int = 0 {
         didSet {
             setup(with: fieldStyle, animated: animated)
@@ -48,9 +48,9 @@ extension UITextField {
         get { return FieldStyle(rawValue: style)! }
         set { style = newValue.rawValue }
     }
-
+    
     lazy var textField: InsetsTextField = {
-
+        
         let size = self.frame.size
         let field = InsetsTextField(frame: CGRect(x: 0, y: 0, width: size.width, height: size.height))
         
@@ -133,3 +133,4 @@ extension UITextField {
         }
     }
 }
+

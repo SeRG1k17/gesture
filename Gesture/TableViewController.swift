@@ -13,6 +13,9 @@ class TableViewController: UITableViewController {
     //var extraHeight: CGFloat = 0
     var selected: Bool?
     
+    var defaultCellHeight: CGFloat = 40
+    var errorCellHeight: CGFloat = 40
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,6 +32,7 @@ class TableViewController: UITableViewController {
         //isHasError = !isHasError
         //extraHeight = extraHeight == 50 ? 0 : 50
         selected = !(selected ?? false)
+        errorCellHeight = errorCellHeight == 40 ? 80 : 40
         tableView.reloadRows(at: [IndexPath(row: 4, section: 0)], with: .automatic)
     }
 
@@ -62,7 +66,9 @@ class TableViewController: UITableViewController {
         
         return cell
     }
-    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return indexPath.row != 4 ? defaultCellHeight : errorCellHeight
+    }
 
     /*
     // Override to support conditional editing of the table view.
