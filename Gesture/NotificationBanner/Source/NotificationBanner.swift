@@ -69,6 +69,33 @@ public class NotificationBanner: BaseNotificationBanner {
         }
     }
     
+    private let minDuration: TimeInterval = 3
+    private let maxDuration: TimeInterval = 8
+    
+    public override var duration: TimeInterval {
+        
+        get {
+            guard let label = titleLabel else { return minDuration }
+            let lineCount = lroundf(roundf(Float(label.intrinsicContentSize.height)) / roundf(Float(label.font.lineHeight)))
+            
+            let currentDuration = TimeInterval(lineCount)
+            var duration = currentDuration
+            
+            if currentDuration < minDuration {
+                duration = minDuration
+                
+            } else if currentDuration > maxDuration {
+                duration = maxDuration
+            }
+            
+            return duration
+        }
+        
+        set {
+            super.duration = newValue
+        }
+    }
+    
     public init(title: String,
                 style: BannerStyle = .info,
                 colors: BannerColorsProtocol? = nil) {

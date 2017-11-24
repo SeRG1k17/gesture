@@ -50,11 +50,7 @@ public class BaseNotificationBanner: UIView {
     public internal(set) var titleLabel: UILabel?
     
     /// The time before the notificaiton is automatically dismissed
-    public var duration: TimeInterval = 5.0 {
-        didSet {
-            //TODO: - 
-        }
-    }
+    public var duration: TimeInterval = 5.0
     
     /// If false, the banner will not be dismissed until the developer programatically dismisses it
     public var autoDismiss: Bool = true {
