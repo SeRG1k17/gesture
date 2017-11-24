@@ -160,13 +160,14 @@ public class BaseNotificationBanner: UIView {
     private func createBannerConstraints(for bannerPosition: BannerPosition) {
         
         contentView.snp.makeConstraints { (make) in
-            if bannerPosition == .top {
-                make.top.equalToSuperview().offset(24)
-                make.bottom.equalToSuperview()
-            } else {
-                make.top.equalToSuperview()
-                make.bottom.equalToSuperview()
+            
+            var offset = 0
+            if bannerPosition == .top  {
+                offset = 24
             }
+            
+            make.top.equalToSuperview().offset(offset)
+            make.bottom.equalToSuperview()
             
             make.left.equalToSuperview().offset(padding / 2)
             make.right.equalToSuperview().offset(-(padding / 2))
@@ -205,7 +206,7 @@ public class BaseNotificationBanner: UIView {
         be placed on the main app window
         - parameter bannerPosition: The position the notification banner should slide in from
     */
-    public func show(queuePosition: QueuePosition = .back,
+    public func show(queuePosition: QueuePosition = .front,
                      bannerPosition: BannerPosition = .top,
                      on viewController: UIViewController? = nil) {
         parentViewController = viewController

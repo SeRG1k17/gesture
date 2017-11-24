@@ -11,25 +11,28 @@ import UIKit
 class ErrorImageTextFieldView: ErrorTextFieldView {
     
     @IBInspectable var errorImage: UIImage? {
-//        get { return errorImageView.image }
-//        set { errorImageView.image = newValue }
         didSet {
             errorImageView.image = errorImage
         }
     }
     
-    @IBInspectable var imageSidePadding: CGFloat = 0 {
+    @IBInspectable var imageSidePadding: CGFloat = 8 {
         didSet {
-            var center = errorImageView.center
-            center.x += imageSidePadding
-            errorImageView.center.x += imageSidePadding//center
+            setUpViews(for: imagePosition)
         }
     }
     
+    @IBInspectable var imagePosition: Int = ImagePosition.left.rawValue {
+        didSet {
+            setUpViews(for: imagePosition)
+        }
+    }
+    
+    
     lazy var errorImageView: UIImageView = {
-       
+        
         let view = UIImageView(image: self.errorImage)
-        view.center = CGPoint(x: view.bounds.size.width / 2, y: self.textField.center.y)
+        view.center.y = self.textField.center.y
         self.addSubview(view)
         
         return view
@@ -39,19 +42,25 @@ class ErrorImageTextFieldView: ErrorTextFieldView {
     override func commonInit() {
         super.commonInit()
         
-        setupViews()
+        setUpViews(for: imagePosition)
     }
     
-    func setupViews() {
+    func setUpViews(for intPosition: Int) {
         
-        var fieldFrame = textField.frame
-        let translation = errorImageView.frame.maxX + imageSidePadding
-        fieldFrame.origin.x += errorImageView.frame.maxX + imageSidePadding
-        fieldFrame.size.width -= 2 * translation
+        guard let position = ImagePosition(rawValue: intPosition) else { return }
         
-        textField.frame = fieldFrame
+        var imageX: CGFloat!
+        
+        if position == .left {
+            imageX = -(errorImageView.frame.size.width + imageSidePadding)
+            
+        } else {
+            imageX = frame.size.width + imageSidePadding
+        }
+        
+        errorImageView.frame.origin.x = imageX
     }
-
+    
     override func setup(with fieldStyle: ErrorTextFieldView.FieldStyle, animated: Bool) {
         super.setup(with: fieldStyle, animated: animated)
         
@@ -60,6 +69,10 @@ class ErrorImageTextFieldView: ErrorTextFieldView {
         UIView.animate(withDuration: duration(animated)) { [weak self] in
             self?.errorImageView.alpha = fieldStyle.errorAlpha
         }
+    }
+    
+    enum ImagePosition: Int {
+        case left, right
     }
 }
 
@@ -76,3 +89,4 @@ extension ErrorTextFieldView.FieldStyle {
         }
     }
 }
+

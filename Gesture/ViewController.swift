@@ -25,8 +25,8 @@ class ViewController: UIViewController {
 
     @IBAction func showAlerButtonDidTapped(_ sender: UIButton) {
         
-        let banner = NotificationBanner(title: "Basic Success Notification",
-                                        style: .danger)
+        NotificationBanner(title: "The email address or ",
+                                        style: .danger).show()
 //        banner.delegate = self
 //
 //        banner.onTap = {
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
 //        banner.onSwipeUp = {
 //            //self.showAlert(title: "Basic Success Notification Swiped Up", message: "")
 //        }
-        banner.show(queuePosition: .front, bannerPosition: .top)
+        //banner.show(queuePosition: .front, bannerPosition: .top)
         
 //        NotificationBanner.shared.showPopup(withMessage: "Some text hereSome text hereSome text hereSome text hereSome text hereSome text hereSome text hereSome text hereSome text hereSome text hereSome text hereSome text hereSome text here")
         

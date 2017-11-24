@@ -57,9 +57,9 @@ public class NotificationBanner: BaseNotificationBanner {
                     
                     let charSize = lroundf(Float(label.font.lineHeight))
                     let rHeight = lroundf(Float(titleHeight))
-                    if rHeight / charSize <= 1 {
-                        titleHeight = 0
-                    }
+//                    if rHeight / charSize <= 1 {
+//                        titleHeight = 0
+//                    }
                 }
                 
                 return super.bannerHeight + titleHeight
